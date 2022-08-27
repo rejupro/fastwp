@@ -14,10 +14,10 @@ if ( ! defined('ABSPATH') ) {
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="type-post <?php if(!has_post_thumbnail()) : echo "no_thumbnail"; endif; ?>">
+	<div class="type-post <?php if ( ! has_post_thumbnail() ) : echo "no_thumbnail"; endif; ?>">
 		<div class="entry-cover">
 			<?php
-				$data = wp_get_archives( array( 'type' => get_the_date()) );
+				$data = wp_get_archives( array( 'type' => get_the_date() ) );
 			?>
 			<div class="post-meta">
 				<span class="post-date"><?php echo fastwp_posted_by();?></span>
@@ -30,7 +30,7 @@ if ( ! defined('ABSPATH') ) {
 				<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 			</div>
 
-			<?php if(!has_post_thumbnail()) : ?>
+			<?php if ( ! has_post_thumbnail() ) : ?>
 				<div class="post-authordet">
 					<ul>
 				        <li><i class="fa fa-user"></i><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?> </a>

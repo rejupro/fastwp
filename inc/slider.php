@@ -7,7 +7,7 @@ if ( ! defined('ABSPATH') ) {
 $fastwp_switch_value = get_theme_mod('slider_switch');
 $fastwp_sliders = get_theme_mod('slider_item');
 
-if($fastwp_switch_value == 1 && $fastwp_sliders) : 
+if ( $fastwp_switch_value == 1 && $fastwp_sliders ) : 
 ?>
 
 
@@ -21,7 +21,7 @@ if($fastwp_switch_value == 1 && $fastwp_sliders) :
 				<?php
 					
 					$i = 1;
-					foreach($fastwp_sliders as $single_slide) :  ?>
+					foreach ( $fastwp_sliders as $single_slide ) :  ?>
 					    <!-- SLIDE  -->
 						<li data-index="rs-<?php echo $i++ ?>" data-transition="random-static,random-premium,random,boxslide,slotslide-horizontal,slotslide-vertical,boxfade,slotfade-horizontal,slotfade-vertical" data-slotamount="default,default,default,default,default,default,default,default,default,default" data-hideafterloop="0" data-hideslideonmobile="off"  data-randomtransition="on" data-easein="default,default,default,default,default,default,default,default,default,default" data-easeout="default,default,default,default,default,default,default,default,default,default" data-masterspeed="default,default,default,default,default,default,default,default,default,default"  data-rotate="0,0,0,0,0,0,0,0,0,0"  data-saveperformance="off"  class="slide-overlay" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 							<!-- MAIN IMAGE -->

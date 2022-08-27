@@ -116,8 +116,9 @@ if ( class_exists('Kirki') ) {
 				'slider_cat'   => esc_html__( 'Slider Category', 'fastwp' ),
 				'slider_title'   => esc_html__( 'Please Update Slider Title', 'fastwp' ),
 				'slider_url'    => '#',
-				'slider_img' => ''
-			],[
+				'slider_img' => '',
+			], 
+			[
 				'slider_cat'   => esc_html__( 'Slider Category', 'fastwp' ),
 				'slider_title'   => esc_html__( 'Please Update Slider Title', 'fastwp' ),
 				'slider_url'    => '#',
@@ -144,7 +145,7 @@ if ( class_exists('Kirki') ) {
 			'slider_img' => [
 				'type'        => 'image',
 				'label'       => esc_html__( 'Upload Slider Image', 'fastwp' ),
-				'description' => 'Add Slider Image (recommandation size 1920px * 600px)'
+				'description' => 'Add Slider Image (recommandation size 1920px * 600px)',
 			],
 		],
 	]);
@@ -258,4 +259,4 @@ if ( class_exists('Kirki') ) {
 
 }
 
-?>
+
