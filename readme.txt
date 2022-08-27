@@ -6,7 +6,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 Requires at least: 5.4
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
@@ -27,6 +27,11 @@ All available options can be used from Appearance->Customize
 
 
 == Changelog ==
+
+= 1.0.4 - August 28 2022 =
+* Preloader removed.
+* Skip link and accessiblity Issue fixed.
+* Code standard check with PHPCS.
 
 = 1.0.3 - August 16 2022 =
 * Skip Link Section Updated

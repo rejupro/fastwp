@@ -43,7 +43,7 @@ if ( ! defined('ABSPATH') ) {
 									<?php
 
 										$fastwp_icons = get_theme_mod('header_icons');
-										if($fastwp_icons) : foreach($fastwp_icons as $icon) :
+										if ( $fastwp_icons ) : foreach ( $fastwp_icons as $icon ) :
 
 									?>
 									<li><a href="<?php echo esc_url($icon['link_url']); ?>" title="<?php echo $icon['icon_title']; ?>" target="<?php echo $icon['link_target']; ?>"><i class="<?php echo esc_attr($icon['link_text']); ?>"></i></a></li>
@@ -57,11 +57,11 @@ if ( ! defined('ABSPATH') ) {
 									<?php
 										$custom_logo_id = get_theme_mod( 'custom_logo' );
 										$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-										if(!empty($custom_logo_id)){
+										if ( ! empty($custom_logo_id) ) {
 											?>
 												<img src="<?php echo $image['0']?>">
 											<?php
-										}else{
+										}else {
 											echo esc_html(get_bloginfo('name'), 'fastwp');
 										}
 									?>
@@ -86,11 +86,11 @@ if ( ! defined('ABSPATH') ) {
 							<?php
 								$fastwp_custom_logo_id = get_theme_mod( 'custom_logo' );
 								$fastwp_image = wp_get_attachment_image_src( $fastwp_custom_logo_id , 'full' );
-								if(!empty($fastwp_custom_logo_id)){
+								if ( ! empty($fastwp_custom_logo_id) ) {
 									?>
 										<img src="<?php echo esc_url($fastwp_image['0']);?>" width="100px">
 									<?php
-								}else{
+								}else {
 									echo get_bloginfo('name');
 								}
 							?>
@@ -110,11 +110,11 @@ if ( ! defined('ABSPATH') ) {
 								    'container_class'   => "",
 								    'container_id'      => "",
 								    'theme_location'    => "primary_menu", 
-							    	'walker'            => new Fastwp_Nav_Walker,
+							    	'walker'            => new Fastwp_Nav_Walker(),
 								) );
 							} else {
 
-									if(is_user_logged_in()) :
+									if ( is_user_logged_in() ) :
 	                                ?>
 	                                	<ul class="navbar-nav">
 	                                		<li><a class="nav-link" title="Contact" href="<?php echo admin_url('nav-menus.php') ;?>">Add Menu</a></li>

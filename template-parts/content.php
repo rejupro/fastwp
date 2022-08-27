@@ -14,7 +14,7 @@ if ( ! defined('ABSPATH') ) {
 ?>
 
 <?php 
-	if(is_single()) :
+	if ( is_single() ) :
 ?>
 
 <article class="type-post" id="postid-<?php echo get_the_ID(); ?>">
@@ -31,11 +31,10 @@ if ( ! defined('ABSPATH') ) {
 			$fastwp_categories = get_the_category();
 			$fastwp_output = '';
 			if ( ! empty( $fastwp_categories ) ) {
-			foreach( $fastwp_categories as $category ) {
+			foreach ( $fastwp_categories as $category ) {
 			    $fastwp_output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a>';
-			}
-			
-			}
+			}           
+}
 			?>
 			<span class="post-category"><?php echo trim( $fastwp_output); ?></span>
 			<h3 class="entry-title"><?php the_title(); ?></h3>
@@ -50,14 +49,14 @@ if ( ! defined('ABSPATH') ) {
 
 		<?php
 			$fastwp_post_tags = get_the_tags();
-			if($fastwp_post_tags) :
+			if ( $fastwp_post_tags ) :
 		?>
 		<div class="entry-footer">
 			<div class="tags">
 
 				<?php
 					
-					foreach($fastwp_post_tags as $single_tag) :
+					foreach ( $fastwp_post_tags as $single_tag ) :
 				?>
 
 				<a href="<?php echo get_tag_link( $single_tag->term_id ) ?>" title="<?php echo $single_tag->name ; ?>"># <?php echo $single_tag->name ; ?></a>
@@ -70,10 +69,10 @@ if ( ! defined('ABSPATH') ) {
 	</div>
 </article>
 <!-- About Author -->
-<?php if(get_theme_mod('author_switch')) : ?>
+<?php if ( get_theme_mod('author_switch') ) : ?>
 <div class="about-author-box">
 	<div class="author">
-		<i><img src="<?php echo get_avatar_url(get_the_author_meta( 'ID' ), ['size' => '64']);  ?>" alt="avatar"></i>
+		<i><img src="<?php echo get_avatar_url(get_the_author_meta( 'ID' ), [ 'size' => '64' ]);  ?>" alt="avatar"></i>
 		<h4><?php the_author(); ?></h4>
 		<p><?php echo the_author_meta('description') ?></p>
 	</div>
@@ -86,10 +85,10 @@ if ( ! defined('ABSPATH') ) {
 	$fastwp_related = get_posts( 
 	    array( 
 	        'category__in' => wp_get_post_categories( $fastwp_post_id ), 
-	        'post__not_in' => array( $fastwp_post_id ) 
+	        'post__not_in' => array( $fastwp_post_id ), 
 	    ) 
 	);
-	if($fastwp_related && get_theme_mod('related_post')) :
+	if ( $fastwp_related && get_theme_mod('related_post') ) :
 ?>
 	
 <!-- Related Post -->
@@ -100,7 +99,7 @@ if ( ! defined('ABSPATH') ) {
 
 		<?php 
 			 
-		    foreach( $fastwp_related as $post ) { 
+		    foreach ( $fastwp_related as $post ) { 
 		    	setup_postdata($post); ?>
 		        <div class="related-post-box">
 					<a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail(); ?></a>
@@ -117,13 +116,13 @@ if ( ! defined('ABSPATH') ) {
 <?php endif; ?>
 <!-- Related Post /- -->
 
-<?php else: ?>
+<?php else : ?>
 
 <div class="blog-paralle">
-	<div class="type-post <?php if(!has_post_thumbnail()) : echo "no_thumbnail"; endif;  ?>">
+	<div class="type-post <?php if ( ! has_post_thumbnail() ) : echo "no_thumbnail"; endif;  ?>">
 		<div class="entry-cover">
 			<?php
-				$data = wp_get_archives( array( 'type' => get_the_date()) );
+				$data = wp_get_archives( array( 'type' => get_the_date() ) );
 			?>
 			<div class="post-meta">
 				<span class="byline">by <?php the_author(); ?></span>
@@ -140,7 +139,7 @@ if ( ! defined('ABSPATH') ) {
 				<span class="post-category"><a href="<?php echo $fastwp_caturl ; ?>" title="Technology"><?php echo $fastwp_category['0']->name ?></a></span>
 				<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 			</div>	
-			<?php if(!has_post_thumbnail()) : ?>
+			<?php if ( ! has_post_thumbnail() ) : ?>
 				<div class="post-authordet">
 					<ul>
 				        <li><i class="fa fa-user"></i><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?> </a>

@@ -205,7 +205,7 @@
 		foreach ( $atts as $attr => $value ) {
 			if ( is_scalar( $value ) && '' !== $value && false !== $value ) {
 				$value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
-				$attributes .=  ' ' . $attr . '="' . $value . '"';
+				$attributes .= ' ' . $attr . '="' . $value . '"';
 			}
 		}
 
@@ -227,11 +227,11 @@
 		
 
 		$item_output  = $args->before;
-		if( $this->has_children ){
+		if ( $this->has_children ) {
 			$item_output .= '<a href="#" class="ddl-switch "><i class="fa fa-angle-down"></i></a><a' . $attributes . '>';
 			$item_output .= $args->link_before . $title . $args->link_after;
 			$item_output .= '</a>';
-		}else{
+		}else {
 			$item_output .= '<a' . $attributes . '>';
 			$item_output .= $args->link_before . $title . $args->link_after;
 			$item_output .= '</a>';
@@ -282,4 +282,4 @@
 
 }
 
-?>
+

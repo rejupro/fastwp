@@ -13,7 +13,7 @@ if ( ! defined('ABSPATH') ) {
 
 if ( ! defined( 'FASTWP_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'FASTWP_VERSION', '1.0.3' );
+	define( 'FASTWP_VERSION', '1.0.4' );
 }
 
 /**
@@ -155,26 +155,26 @@ function fastwp_custom_scripts() {
 	wp_enqueue_style( 'fastwp-style', get_stylesheet_uri(), array(), FASTWP_VERSION );
 
 	// keyboard control js
-	wp_enqueue_script( 'fastwp-menu-navigation', get_template_directory_uri() . '/themefile/assets/js/navigation.js', array('jquery'), FASTWP_VERSION, true );
+	wp_enqueue_script( 'fastwp-menu-navigation', get_template_directory_uri() . '/themefile/assets/js/navigation.js', array( 'jquery' ), FASTWP_VERSION, true );
 
 	// popper
-	wp_enqueue_script( 'fastwp-propperjs', get_template_directory_uri() . '/themefile/assets/js/popper.min.js', array('jquery'), FASTWP_VERSION, true );
+	wp_enqueue_script( 'fastwp-propperjs', get_template_directory_uri() . '/themefile/assets/js/popper.min.js', array( 'jquery' ), FASTWP_VERSION, true );
 	// lib
-	wp_enqueue_script( 'fastwp-libjs', get_template_directory_uri() . '/themefile/assets/js/lib.js', array('jquery'), FASTWP_VERSION, true );
+	wp_enqueue_script( 'fastwp-libjs', get_template_directory_uri() . '/themefile/assets/js/lib.js', array( 'jquery' ), FASTWP_VERSION, true );
 
 	// slider
-	wp_enqueue_script( 'fastwp-tools', get_template_directory_uri() . '/themefile/assets/revolution/js/jquery.themepunch.tools.min.js', array('jquery'), FASTWP_VERSION, true );
-	wp_enqueue_script( 'fastwp-themepunch', get_template_directory_uri() . '/themefile/assets/revolution/js/jquery.themepunch.revolution.min.js', array('jquery'), FASTWP_VERSION, true );
+	wp_enqueue_script( 'fastwp-tools', get_template_directory_uri() . '/themefile/assets/revolution/js/jquery.themepunch.tools.min.js', array( 'jquery' ), FASTWP_VERSION, true );
+	wp_enqueue_script( 'fastwp-themepunch', get_template_directory_uri() . '/themefile/assets/revolution/js/jquery.themepunch.revolution.min.js', array( 'jquery' ), FASTWP_VERSION, true );
 	// revolution
-	wp_enqueue_script( 'fastwp-action', get_template_directory_uri() . '/themefile/assets/revolution/js/extensions/revolution.extension.actions.min.js', array('jquery'), FASTWP_VERSION, true );
-	wp_enqueue_script( 'fastwp-carousel', get_template_directory_uri() . '/themefile/assets/revolution/js/extensions/revolution.extension.carousel.min.js', array('jquery'), FASTWP_VERSION, true );
-	wp_enqueue_script( 'fastwp-kenburn', get_template_directory_uri() . '/themefile/assets/revolution/js/extensions/revolution.extension.kenburn.min.js', array('jquery'), FASTWP_VERSION, true );
-	wp_enqueue_script( 'fastwp-layeranimation', get_template_directory_uri() . '/themefile/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js', array('jquery'), FASTWP_VERSION, true );
-	wp_enqueue_script( 'fastwp-migration', get_template_directory_uri() . '/themefile/assets/revolution/js/extensions/revolution.extension.migration.min.js', array('jquery'), FASTWP_VERSION, true );
-	wp_enqueue_script( 'fastwp-navigation', get_template_directory_uri() . '/themefile/assets/revolution/js/extensions/revolution.extension.navigation.min.js', array('jquery'), FASTWP_VERSION, true );
-	wp_enqueue_script( 'fastwp-slideanims', get_template_directory_uri() . '/themefile/assets/revolution/js/extensions/revolution.extension.slideanims.min.js', array('jquery'), FASTWP_VERSION, true );
-	wp_enqueue_script( 'fastwp-video', get_template_directory_uri() . '/themefile/assets/revolution/js/extensions/revolution.extension.video.min.js', array('jquery'), FASTWP_VERSION, true );
-	wp_enqueue_script( 'fastwp-main-function', get_template_directory_uri() . '/themefile/assets/js/functions.js', array('jquery'), FASTWP_VERSION, true );
+	wp_enqueue_script( 'fastwp-action', get_template_directory_uri() . '/themefile/assets/revolution/js/extensions/revolution.extension.actions.min.js', array( 'jquery' ), FASTWP_VERSION, true );
+	wp_enqueue_script( 'fastwp-carousel', get_template_directory_uri() . '/themefile/assets/revolution/js/extensions/revolution.extension.carousel.min.js', array( 'jquery' ), FASTWP_VERSION, true );
+	wp_enqueue_script( 'fastwp-kenburn', get_template_directory_uri() . '/themefile/assets/revolution/js/extensions/revolution.extension.kenburn.min.js', array( 'jquery' ), FASTWP_VERSION, true );
+	wp_enqueue_script( 'fastwp-layeranimation', get_template_directory_uri() . '/themefile/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js', array( 'jquery' ), FASTWP_VERSION, true );
+	wp_enqueue_script( 'fastwp-migration', get_template_directory_uri() . '/themefile/assets/revolution/js/extensions/revolution.extension.migration.min.js', array( 'jquery' ), FASTWP_VERSION, true );
+	wp_enqueue_script( 'fastwp-navigation', get_template_directory_uri() . '/themefile/assets/revolution/js/extensions/revolution.extension.navigation.min.js', array( 'jquery' ), FASTWP_VERSION, true );
+	wp_enqueue_script( 'fastwp-slideanims', get_template_directory_uri() . '/themefile/assets/revolution/js/extensions/revolution.extension.slideanims.min.js', array( 'jquery' ), FASTWP_VERSION, true );
+	wp_enqueue_script( 'fastwp-video', get_template_directory_uri() . '/themefile/assets/revolution/js/extensions/revolution.extension.video.min.js', array( 'jquery' ), FASTWP_VERSION, true );
+	wp_enqueue_script( 'fastwp-main-function', get_template_directory_uri() . '/themefile/assets/js/functions.js', array( 'jquery' ), FASTWP_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -240,15 +240,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Add Class Children Nav Link
  */
-function fastwp_add_menu_link_class($atts, $item, $args)
-{	
+function fastwp_add_menu_link_class( $atts, $item, $args ) {   
 	$fastwp_hasChildren = (in_array('menu-item-has-children', $item->classes));
 		
-	if ($fastwp_hasChildren) {
+	if ( $fastwp_hasChildren ) {
    		$atts['class'] = 'nav-link dropdown-toggle'; 
-   	}else{
+   	}else {
    		$atts['class'] = 'nav-link';
-   	}	
+   	}   
 			
     
     return $atts;

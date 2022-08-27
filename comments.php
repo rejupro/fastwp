@@ -56,7 +56,7 @@ if ( post_password_required() ) {
 				array(
 					'style'      => 'ol',
 					'short_ping' => true,
-					'callback' => 'Fastwp_CommentHelp'
+					'callback' => 'Fastwp_CommentHelp',
 				)
 			);
 			?>

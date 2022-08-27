@@ -48,7 +48,7 @@ get_header();
                             'next_text' => esc_html__( 'Next &#10095;', 'fastwp' ),
                         )
                     ); ?>
-					<?php else: ?>
+					<?php else : ?>
 						<div class="content-area col-md-8">
 							<p> <?php esc_html_e( 'There have no Post', 'fastwp' ); ?></p>
 						</div>
