@@ -352,6 +352,12 @@ input:focus-visible{
 	color: #151515;
 	font-size: 22px;
 }
+/* Header Date */
+.header-date{
+	text-align: right;
+	padding: 15px 0px;
+	font-family: 'Montserrat', sans-serif;
+}
 
 /* .header_s .menu-block .ownavigation .image-logo > img {
 	max-height: 50px;

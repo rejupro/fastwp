@@ -27,12 +27,6 @@ if ( ! defined('ABSPATH') ) {
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'fastwp'); ?></a>
-		<!-- Loader -->
-		<div id="site-loader" class="load-complete">
-			<div class="loader">
-				<div class="line-scale"><div></div><div></div><div></div><div></div><div></div></div>
-			</div>
-		</div><!-- Loader /- -->
 			
 		<!-- Header Section -->
 		<header class="container-fluid no-left-padding no-right-padding header_s header-fix header_s1">
@@ -74,29 +68,14 @@ if ( ! defined('ABSPATH') ) {
 								</a>
 							</div>
 							<div class="col-lg-4 col-6">
-								<ul class="top-right user-info">
-									<li><a href="#search-box" data-toggle="collapse" class="search collapsed" title="Search"><i class="fa fa-search sr-ic-open"></i><i class="fa fa-close sr-ic-close"></i></a></li>
-								</ul>
+								<div class="header-date">
+									<?php echo date('F j, Y'); ?>
+								</div>
 							</div>
 						</div>
 					</div><!-- Container /- -->
 				</div><!-- Top Header /- -->				
 			</div><!-- SidePanel /- -->
-			
-			<!-- Search Box -->
-			<div class="search-box collapse" id="search-box">
-				<div class="container">
-				<form method="get" action="<?php echo esc_url(home_url( '/' )); ?>">
-					<div class="input-group">
-						<input type="text" class="form-control" name="s" placeholder="Search..." required>
-						<span class="input-group-btn">
-							<button class="btn btn-secondary" type="submit"><i class="fa fa-search"></i></button>
-							<a href="#search-box" data-toggle="collapse" class="search collapsed" title="Search"><i class="fa fa-close sr-ic-close"></i></a>
-						</span>
-					</div>
-				</form>
-				</div>
-			</div><!-- Search Box /- -->
 
 			<!-- Menu Block -->
 			<div class="container-fluid no-left-padding no-right-padding menu-block">
