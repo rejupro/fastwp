@@ -13,7 +13,7 @@ if ( ! defined('ABSPATH') ) {
 
 if ( ! defined( 'FASTWP_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'FASTWP_VERSION', '1.0.4' );
+	define( 'FASTWP_VERSION', '1.0.6' );
 }
 
 /**

@@ -1,4 +1,4 @@
-=== fastwp ===
+=== Fastwp ===
 
 Contributors: reedwanul
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -6,15 +6,15 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 Requires at least: 5.4
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 1.0.4
+Stable tag: 1.0.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called fastwp.
+A starter theme called Fastwp.
 
 == Description ==
 
-Description: fastwp is a simle blog theme for using users.This theme is fully responsive, and easy to Customize for your any kinds of Blog like travel, food, lifestyle, photography, personal, sports, news and many more. Theme is SEO friendly and suitable for all kinds of blogging websites.In this theme just one plugin recommended.Installed & activate it then go Appearance>Customize you will get more option for your blog website.
+Description: Fastwp is a simple and user-friendly blog theme, fully responsive and easily customizable for various types of blogs, such as travel, food, lifestyle, photography, personal, sports, and news. The theme is SEO-optimized and ideal for all kinds of blogging websites. It recommends just one plugin, which can be installed and activated to unlock more customization options via Appearance > Customize for your blog.
 
 == Installation ==
 
@@ -27,6 +27,12 @@ All available options can be used from Appearance->Customize
 
 
 == Changelog ==
+
+= 1.0.6 - September 11 2024 =
+* Checked with WordPress Version 6.6.2
+
+= 1.0.5 - September 20 2022 =
+* Updated Underline Related Iussue
 
 = 1.0.4 - August 28 2022 =
 * Preloader removed.
