@@ -13,7 +13,7 @@ if ( ! defined('ABSPATH') ) {
 
 if ( ! defined( 'FASTWP_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'FASTWP_VERSION', '1.0.6' );
+	define( 'FASTWP_VERSION', '1.0.7' );
 }
 
 /**
@@ -117,6 +117,16 @@ function fastwp_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'fastwp_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'fastwp_content_width', 0 );
+
+/**
+ * Load the class file responsible for adding theme support features.
+ */
+require_once get_template_directory() . '/theme-support/class-theme-support.php';
+
+/**
+ * Initialize the Theme Support class to register block styles, patterns, and other theme features.
+ */
+new \Fastwp\Support\Theme_Support();
 
 /**
  * Register widget area.
